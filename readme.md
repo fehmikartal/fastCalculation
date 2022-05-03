@@ -11,10 +11,16 @@
 
 ### Değiştirebileceğiniz Özellikler
 - fastCalculation.py içindeki SETTINGS kısmında repeatTime(Soru Sayısı) ve limit(Maksimum Basamak Sayısı) özelliklerini istediğiniz gibi değiştirebilirsiniz.
+##### Default Settings
+```
+# SETTINGS
+repeatTime = 5
+limit = 2
+```
 
 ------------
 ### Puan Hesaplanması
  Puanlarınız şu kurallara göre hesaplanır:
  - Her oyun +5 puan alırsınız.
  - 5 saniyenin altında cevapladığınız her soru için hızınız kadar puan alırsınız.
- - Doğru cevapladıınız her soru için basamak limiti ile orantılı olarak puan kazanırsınız.
+ - Doğru cevapladığınız her soru için basamak limiti ile orantılı olarak puan kazanırsınız.

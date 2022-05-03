@@ -2,7 +2,7 @@ import time
 from random import randint as ri
 
 # SETTINGS
-repeatTime = 2                                                      # soru sayısı
+repeatTime = 5                                                      # soru sayısı
 limit = 2                                                           # gelen sayıların basamak sayısı (maksimum)
 # username = 'GloRudd'                                              # for a future project
 
