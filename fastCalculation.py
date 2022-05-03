@@ -69,7 +69,6 @@ if final_point > top_score:
     top_score = final_point
     f = open('topScore.txt', 'w')
     f.write(str(top_score))
-#
 
 # AVERAGE TIME ENJOYER
 sum_of_times = 0
@@ -92,9 +91,4 @@ print(f'{line}\n{"YENİ REKOR!" if new_record else "Rekorunun "+str(top_score-fi
 ██║░░╚██╗██║░░░░░██║░░██║██╔══██╗██║░░░██║██║░░██║██║░░██║
 ╚██████╔╝███████╗╚█████╔╝██║░░██║╚██████╔╝██████╔╝██████╔╝
  ╚═════╝ ╚══════╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝
-
-
-
-matematik işlemi yaptıkça + para, sonra parayı kumarda yemece
-kivy ile geliştir
 '''
