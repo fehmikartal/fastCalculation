@@ -10,7 +10,7 @@
 ------------
 
 ### Değiştirebileceğiniz Özellikler
-- fastCalculation.py içindeki SETTINGS kısmında repeatTime(Soru Sayısı), limit(Maksimum Basamak Sayısı) ve high_score_run özelliklerini istediğiniz gibi değiştirebilirsiniz.
+- fastCalculation.py içindeki SETTINGS kısmında repeatTime(Soru Sayısı), limit(Maksimum Basamak Sayısı) ve difficulty(Zorluk) özelliklerini istediğiniz gibi değiştirebilirsiniz.
 ##### Default Settings
 ```
 # SETTINGS
