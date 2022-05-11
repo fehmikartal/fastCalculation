@@ -5,7 +5,7 @@ from tracemalloc import stop
 # SETTINGS
 repeatTime = 5                                                      # soru sayısı
 limit = 2                                                           # gelen sayıların basamak sayısı (maksimum)
-high_score_run = True
+difficulty = 1                                                      # 0- easy(ileride eklenecek), 1- normal, 2- hard
 # username = 'GloRudd'                                              # for a future project
 
 # VARIABLES
@@ -38,7 +38,7 @@ while repeatTime > 0:
             timeRecords.append(timeDiff)
             if add_points(timeDiff): points += round((5-timeDiff)*10)
         else:
-            if high_score_run: 
+            if difficulty>1: 
                 print('High Score Run ended.')
                 exit()
             else: print(f'Yanlış Cevap. (Doğru: {n1+n2}, Cevabın: {ans})')
@@ -48,7 +48,7 @@ while repeatTime > 0:
             timeRecords.append(timeDiff)
             if add_points(timeDiff): points += round((5-timeDiff)*10)
         else:
-            if high_score_run: 
+            if difficulty>1: 
                 print('High Score Run ended.')
                 exit()
             else: print(f'Yanlış Cevap. (Doğru: {n1-n2}, Cevabın: {ans})')

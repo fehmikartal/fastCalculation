@@ -10,12 +10,13 @@
 ------------
 
 ### Değiştirebileceğiniz Özellikler
-- fastCalculation.py içindeki SETTINGS kısmında repeatTime(Soru Sayısı) ve limit(Maksimum Basamak Sayısı) özelliklerini istediğiniz gibi değiştirebilirsiniz.
+- fastCalculation.py içindeki SETTINGS kısmında repeatTime(Soru Sayısı), limit(Maksimum Basamak Sayısı) ve high_score_run özelliklerini istediğiniz gibi değiştirebilirsiniz.
 ##### Default Settings
 ```
 # SETTINGS
 repeatTime = 5
 limit = 2
+difficulty = 1
 ```
 
 ------------
@@ -24,3 +25,8 @@ limit = 2
  - Her oyun +5 puan alırsınız.
  - 5 saniyenin altında cevapladığınız her soru için hızınız kadar puan alırsınız.
  - Doğru cevapladığınız her soru için basamak limiti ile orantılı olarak puan kazanırsınız.
+
+### Zorluk Dereceleri
+- **Kolay Mod [İLERİDE EKLENECEK]:** Doğru bildiğiniz sorulardan puan alabilmek için gereken maksimum cevaplama süresi ~~5 saniyeden~~ **7 saniyeye** çıkarılır. Ancak bildiğiniz sorulardan daha az puan alırsınız.
+- **Normal Mod:** Oyunun sıradan ayarlarıyla oynayın.
+- **Zor Mod:** Vereceğiniz tek yanlış cevap oyunun direkt bitmesine ve puanınızın hesaplanmamasına sebep olacak.
