@@ -1,9 +1,11 @@
 import time
 from random import randint as ri
+from tracemalloc import stop
 
 # SETTINGS
 repeatTime = 5                                                      # soru sayısı
 limit = 2                                                           # gelen sayıların basamak sayısı (maksimum)
+high_score_run = True
 # username = 'GloRudd'                                              # for a future project
 
 # VARIABLES
@@ -36,14 +38,20 @@ while repeatTime > 0:
             timeRecords.append(timeDiff)
             if add_points(timeDiff): points += round((5-timeDiff)*10)
         else:
-            print(f'Yanlış Cevap. (Doğru: {n1+n2}, Cevabın: {ans})')
+            if high_score_run: 
+                print('High Score Run ended.')
+                exit()
+            else: print(f'Yanlış Cevap. (Doğru: {n1+n2}, Cevabın: {ans})')
     elif operation == '-':
         if ans == n1-n2:
             print(str(round(timeDiff, 4)) + ' saniye')
             timeRecords.append(timeDiff)
             if add_points(timeDiff): points += round((5-timeDiff)*10)
         else:
-            print(f'Yanlış Cevap. (Doğru: {n1-n2}, Cevabın: {ans})')    
+            if high_score_run: 
+                print('High Score Run ended.')
+                exit()
+            else: print(f'Yanlış Cevap. (Doğru: {n1-n2}, Cevabın: {ans})')
 
 
 
