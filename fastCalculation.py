@@ -1,6 +1,5 @@
 import time
 from random import randint as ri
-from tracemalloc import stop
 
 # SETTINGS
 repeatTime = 5                                                      # soru sayısı
@@ -16,6 +15,7 @@ new_record = False
 timeRecords = []
 maxNum = (limit-1)*100
 operations = ['+','-']
+reaction_time = 0.2                                                 # 0.0 yaparsanız reaksiyon vermeniz için ek süre almazsınız. Önerilen: 0.2sn
 
 # FUNCTIONS
 def add_points(td):
@@ -36,7 +36,7 @@ while repeatTime > 0:
         if ans == n1+n2:
             print(str(round(timeDiff, 4)) + ' saniye')
             timeRecords.append(timeDiff)
-            if add_points(timeDiff): points += round((5-timeDiff)*10)
+            if add_points(timeDiff): points += round((5-timeDiff+reaction_time)*10)
         else:
             if difficulty>1: 
                 print('High Score Run ended.')
@@ -64,12 +64,9 @@ final_point = 5 + points + len(timeRecords)*5
 try:
     ts_data = open('topScore.txt', 'r')
     top_score = ts_data.read()
-except:
-    open('topScore.txt','w')
-
-try:
     top_score = int(top_score)
 except:
+    open('topScore.txt','w')
     top_score = 0
 
 if final_point > top_score:
@@ -86,7 +83,7 @@ average_time = sum_of_times/len(timeRecords)
 
 # RESULTS
 print(f"{line}\nDOĞRU CEVAP SAYISI: {len(timeRecords)}")
-print(f"ORTALAMA: {round(average_time,4)} saniye")
+print(f"ORTALAMA: {round(average_time,4)} saniye [EN İYİ: {round(min(timeRecords),2)} saniye, EN KÖTÜ: {round(max(timeRecords),2)} saniye]")
 print(f"PUAN: {final_point}/{max_points} (Başarı: %{round(final_point/max_points*100)})")
 print(f"{line}\nOynadığın İçin Teşekkürler: +5\nZaman: +{points}\nDoğru Cevaplar: +{len(timeRecords)*(limit-1)*5}")
 print(f'{line}\n{"YENİ REKOR!" if new_record else "Rekorunun "+str(top_score-final_point)+" puan gerisinde kaldın." }\nEN YÜKSEK PUAN: {top_score}\n{line}')
