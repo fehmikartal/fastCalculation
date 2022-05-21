@@ -41,7 +41,7 @@ difficulty = 1
 #### fastCalculation
 - İşlem sürelerinden daha fazla puan alabilmeniz için reaction_time(Tepki Süresi) bonusu eklendi.
 - Artık oyun sonunda en uzun ve en kısa cevap sürelerinizi görebileceksiniz.
-- Kodlarda birtakım iyileştirmler yapıldı
+- Kodlarda birtakım iyileştirmeler yapıldı
 
 #### fastReaction 
 - Kritik sorunları henüz çözüme kavuşturulmadığı için tam olarak yayınlanmasa da fastReaction adlı yeni bir proje üzerinde çalışıyorum.
