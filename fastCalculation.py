@@ -4,7 +4,7 @@ from random import randint as ri
 # SETTINGS
 repeatTime = 5                                                      # soru sayısı
 limit = 2                                                           # gelen sayıların basamak sayısı (maksimum)
-difficulty = 1                                                      # 0- easy(ileride eklenecek), 1- normal, 2- hard
+difficulty = 2                                                      # 0- easy(ileride eklenecek), 1- normal, 2- hard
 # username = 'GloRudd'                                              # for a future project
 
 # VARIABLES
@@ -14,8 +14,8 @@ line = '-------------------------'
 new_record = False
 timeRecords = []
 maxNum = (limit-1)*100
-operations = ['+','-']
-reaction_time = 0.2                                                 # 0.0 yaparsanız reaksiyon vermeniz için ek süre almazsınız. Önerilen: 0.2sn
+operations = ['-'] #['+',
+reaction_time = 0.2                                                 # 0.0 yaparsanız reaksiyon vermeniz için ek süre almazsınız. Önerilen reaksiyon sürenizi fastReaction.py'dan test edin.
 
 # FUNCTIONS
 def add_points(td):

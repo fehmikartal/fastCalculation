@@ -5,7 +5,6 @@ print ('Press ENTER!')
 t1 = time()
 ans = input('')
 t2 = time()
-print('Your reaction time was ' + str(round(t2-t1,5)) + ' seconds.')
 
 # HIGH SCORE
 try:
@@ -18,13 +17,18 @@ except:
 
 improve = top_react-(t2-t1)
 
-if t2-t1 < top_react:
-    top_react = t2-t1
-    f = open('topReact.txt', 'w')
-    f.write(str(top_react))
-    print(f'///// NEW RECORD! ///// Improved {round(improve,10)} seconds!')
+if t2-t1 == 0.0:
+    print('You pressed early.')
 else:
-    print(f'You were {round(improve,5)} seconds late.')
+    print('Your reaction time was ' + str(round(t2-t1,5)) + ' seconds.')
+
+    if t2-t1 < top_react:
+        top_react = t2-t1
+        f = open('topReact.txt', 'w')
+        f.write(str(top_react))
+        print(f'///// NEW RECORD! ///// Improved {round(improve,10)} seconds!')
+    else:
+        print(f'You were {round(improve,5)} seconds late.')
 
 # bilinen hatalar
 # - press enter yazısı çıkmadan basarsan 0.03 gibi saniyelere ulaşıyorsun. 
