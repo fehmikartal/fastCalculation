@@ -4,9 +4,6 @@
 - Amacınız işlemin sonucunu olabildiğince kısa sürede yazabilmektir.
 - Her oyunun sonunda doğru cevapladığınız soru sayısına ve cevap sürenize göre puan kazanırsınız.
 
--  *Fast Calculation henüz erken geliştirme aşamasında, dolayısıyla geliştirilecek birçok özelliği bulunmakta. Yine de aklınızdaki fikirleri paylaşmaktan çekinmeyin.*
-
-
 ------------
 
 ### Değiştirebileceğiniz Özellikler
@@ -18,7 +15,7 @@ repeatTime = 5
 limit = 2
 difficulty = 1
 ```
--  *Alpha v1.2 ile gelen tepki süresi bonusunu istemiyorsanız `reaction_time = 0.2` değişkeninin değerini 0.0 olarak ayarlayabilirsiniz.*
+-  *Tepki süresi bonusunu istemiyorsanız `reaction_time = 0.2` değişkeninin değerini 0.0 olarak ayarlayabilirsiniz.*
 
 ------------
 
@@ -41,7 +38,7 @@ difficulty = 1
 #### fastCalculation
 - İşlem sürelerinden daha fazla puan alabilmeniz için reaction_time(Tepki Süresi) bonusu eklendi.
 - Artık oyun sonunda en uzun ve en kısa cevap sürelerinizi görebileceksiniz.
-- Kodlarda birtakım iyileştirmler yapıldı
+- Kodlarda birtakım iyileştirmeler yapıldı
 
 #### fastReaction 
-- Kritik sorunları henüz çözüme kavuşturulmadığı için tam olarak yayınlanmasa da fastReaction adlı yeni bir proje üzerinde çalışıyorum.
+- Kritik sorunları henüz çözüme kavuşmadığı için tam olarak yayınlanmasa da fastReaction adlı yeni bir proje üzerinde çalışıyorum.
